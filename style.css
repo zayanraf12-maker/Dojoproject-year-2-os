@@ -1,0 +1,315 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+ 
+
+}
+
+header {
+  background-color: #e4de95;
+  color: #fff;
+  padding: 0.5em 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.site-brand img{
+  height:48px;
+  width:auto;
+  display:block;
+}
+
+.hero {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+.about {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Footer */
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left:auto;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background: #fff;
+  color: #222;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #f0f0f0; /* light grey like your wireframe */
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.green-box, .red-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  min-height: 200px;
+  border-radius: 25px;
+  padding: 25px;
+  color: black;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.green-box {
+  background-color: #4CAF50; /* green */
+}
+
+.red-box {
+  background-color: #FF6B6B; /* red */
+}
+
+/* ===== LOGIN PAGE ===== */
+
+.login-page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-box {
+  border: 2px solid black; /* Black border around box */
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 320px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-box button:hover {
+  background-color: #f2f2f2;
+}
+
+.login-box a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SIGNUP PAGE (style to match login box) ===== */
+
+.center-content {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 320px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 60px;
+}
+
+.center-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.center-content input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.center-content button {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.center-content button:hover {
+  background-color: #f2f2f2;
+}
+
+.center-content a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.center-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== BOOKING PAGE ===== */
+.center-content {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 320px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 60px auto;
+}
+
+.center-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.center-content input[type="date"],
+.center-content input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.center-content button {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.center-content button:hover {
+  background-color: #f2f2f2;
+}
+
+.flash.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* make centered content wider and style form controls */
+.center-content{
+  max-width:900px;
+  margin:24px auto;
+  padding:24px;
+  background:#ffffffcc; /* slightly translucent white */
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+.center-content label{ display:block; margin-bottom:6px; font-weight:600; }
+.center-content input[type="text"],
+.center-content input[type="date"],
+.center-content input[type="time"],
+.center-content input[type="number"],
+.center-content textarea,
+.center-content select,
+.center-content input[type="file"]{
+  width:100%;
+  box-sizing:border-box;
+  padding:8px 10px;
+  border:1px solid #dcdcdc;
+  border-radius:6px;
+  background: #fff;
+}
+
+.center-content textarea{ min-height:110px; resize:vertical; }
+
+.center-content button{ padding:10px 16px; border-radius:8px; background:#1abc9c; color:#04392f; border:0; cursor:pointer; font-weight:600 }
+
+@media (max-width:760px){
+  .center-content{ max-width:95%; padding:16px; }
+  .center-content div[style*="display:flex"]{ flex-direction:column; gap:8px; }
+}
+
