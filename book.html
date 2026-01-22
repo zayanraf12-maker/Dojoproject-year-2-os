@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="center-content">
+  <h2>Book a Session</h2>
+  <p>Select one of the organiser-created sessions below to book.</p>
+
+  <form method="post" id="booking-form">
+    <label for="session_select">Available sessions:</label>
+    <select id="session_select" name="session_id" required>
+      <option value="">-- choose a session --</option>
+      {% for s in sessions %}
+        <option value="{{ s[0] }}">{{ s[1] }} — {{ s[2] }} at {{ s[3] }} (cap {{ s[4] }})</option>
+      {% endfor %}
+    </select>
+
+    <button type="submit">Book Selected Session</button>
+  </form>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <p class="flash {{ category }}">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <hr>
+
+  <h3>Your bookings</h3>
+  {% if bookings %}
+    <ul>
+      {% for b in bookings %}
+        <li>
+          Booking #{{ b[0] }} — {{ b[1] }} at {{ b[2] }}
+          <form method="post" action="{{ url_for('cancel_booking', booking_id=b[0]) }}" style="display:inline" onsubmit="return confirm('Cancel booking #{{ b[0] }}?');">
+            <button type="submit">Cancel</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You have no bookings yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
